@@ -16,7 +16,7 @@ The app allows you to create an account using firebase database. Allows you as a
 ![alt text](https://raw.githubusercontent.com/SIonut0122/ecommercetv/gh-pages/static/media/ecommtv2.png)
 ![alt text](https://raw.githubusercontent.com/SIonut0122/ecommercetv/gh-pages/static/media/ecommtv3.png)
 
-## Open app: [here](https://sionut0122.github.io/ecommercetv/)
+## Open app: [Open project](https://sionut0122.github.io/ecommercetv/)
 
 ## Built with:
 
