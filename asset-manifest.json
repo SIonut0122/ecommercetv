@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/ecommercetv/static/css/main.e4cafc83.chunk.css",
+    "main.js": "/ecommercetv/static/js/main.eb6d8fa7.chunk.js",
+    "main.js.map": "/ecommercetv/static/js/main.eb6d8fa7.chunk.js.map",
+    "runtime-main.js": "/ecommercetv/static/js/runtime-main.c45bfeb5.js",
+    "runtime-main.js.map": "/ecommercetv/static/js/runtime-main.c45bfeb5.js.map",
+    "static/js/2.03fdcb24.chunk.js": "/ecommercetv/static/js/2.03fdcb24.chunk.js",
+    "static/js/2.03fdcb24.chunk.js.map": "/ecommercetv/static/js/2.03fdcb24.chunk.js.map",
+    "index.html": "/ecommercetv/index.html",
+    "precache-manifest.625596e9449efb7cb055818bd423eb4d.js": "/ecommercetv/precache-manifest.625596e9449efb7cb055818bd423eb4d.js",
+    "service-worker.js": "/ecommercetv/service-worker.js",
+    "static/css/main.e4cafc83.chunk.css.map": "/ecommercetv/static/css/main.e4cafc83.chunk.css.map",
+    "static/media/1.jpg": "/ecommercetv/static/media/1.fe1cc5e1.jpg",
+    "static/media/2.jpg": "/ecommercetv/static/media/2.f680d8a0.jpg",
+    "static/media/3.jpg": "/ecommercetv/static/media/3.f447d39e.jpg",
+    "static/media/4.jpg": "/ecommercetv/static/media/4.fa3f7350.jpg",
+    "static/media/cart.svg": "/ecommercetv/static/media/cart.47e5bbf5.svg",
+    "static/media/find_store_img.png": "/ecommercetv/static/media/find_store_img.fc42ae1a.png",
+    "static/media/hdmi_cable.jpg": "/ecommercetv/static/media/hdmi_cable.7222a047.jpg",
+    "static/media/hdmi_gold.jpg": "/ecommercetv/static/media/hdmi_gold.aa9a964d.jpg",
+    "static/media/Checkout.css": "/ecommercetv/static/media/ver_visa.5f92cf0f.svg",
+    "static/media/tv_404.jpg": "/ecommercetv/static/media/tv_404.70d07804.jpg",
+    "static/media/Header.css": "/ecommercetv/static/media/tv_icon.3d9321e3.jpg",
+    "static/media/FindStore.css": "/ecommercetv/static/media/updownarrow.58314679.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c45bfeb5.js",
+    "static/js/2.03fdcb24.chunk.js",
+    "static/css/main.e4cafc83.chunk.css",
+    "static/js/main.eb6d8fa7.chunk.js"
+  ]
+}
