@@ -2,7 +2,6 @@
 Source code: https://github.com/SIonut0122/ecommercetv/tree/gh-pages/ecommercetv
 
 ## Description
-This app was created for self-learning purpose.
 
 The app allows you to create an account using firebase database. Allows you as a real ecommerce website to search for your product and:
 
