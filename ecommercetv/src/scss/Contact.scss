@@ -1,0 +1,371 @@
+
+
+$background-color: #D9D9D9;
+@media screen and (max-width:767.5px) {
+	.contact_wrap_inputs {
+		border-left: none !important;
+		border-right: none !important;
+	}
+}
+
+.contact_container {
+	min-height: 400px;
+	background-color: $background-color;
+	font-family: azo-sans-web, 'Qanelas';
+	padding-bottom: 45px;
+}
+
+.contact_wrapper {
+	min-height: 400px;
+	position: relative;
+	background-color: #fff;
+	margin: 20px 0 30px 0;
+}
+
+.contact_subnav {
+	display: inline-block;
+	min-height: 25px;
+	margin-top: 15px;
+	padding: 10px 0 15px 20px;
+	border-bottom: 1px solid #D4D4D4;
+}
+
+.contact_subnav span {
+	margin-left: 10px;
+	margin-top: 5px;
+}
+
+.subnav_address {
+	margin-left: 10px;
+	margin-top: 5px;
+	color: #3766FF;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.subnav_address:hover {
+	text-decoration: underline;
+}
+
+.contact_title {
+	display: block;
+	border-bottom: 1px solid #D4D4D4;
+	margin-top: 30px;
+	font-size: 35px;
+	font-weight: bold;
+}
+
+.contact_subtitle {
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+.contact_select_div {
+	position: relative;
+	min-height: 30px;
+}
+
+.contact_select:focus {
+	outline: #08f auto 2px;
+}
+
+.contact_wrap_select {
+	position: relative;
+	display: block;
+	width: 370px;
+	height: 35px;
+	border: 1px solid #8D8D8D;
+	margin-top: 10px;
+}
+
+.contact_wrap_select select {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding-left: 10px;
+	left: 0;
+	top: 0;
+	outline: 0;
+	color: rgba(0, 0, 0, 0);
+	text-shadow: 0 0 0 #000;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: url('../images/cart/updownarrow.svg') 98% / 4% no-repeat #fff;
+	border: none;
+	cursor: pointer;
+}
+
+.contact_wrap_select select option {
+	font-size: 14px;
+	color: #000;
+}
+
+
+/* -- Inputs -- */
+
+.contact_wrap_inputs {
+	display: block;
+	position: relative;
+	min-height: 300px;
+	border: 2px solid #D4D4D4;
+	padding: 25px;
+	margin: 10px;
+	overflow: hidden;
+}
+
+.contact_req_load {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.5);
+	z-index: 99;
+	left: 0;
+	top: 0;
+}
+
+.ct_load {
+	display: inline-block;
+	position: relative;
+	width: 64px;
+	height: 64px;
+	margin-top: 200px;
+}
+
+.ct_load div {
+	position: absolute;
+	width: 5px;
+	height: 5px;
+	background: #BEBEBE;
+	border-radius: 50%;
+	animation: ct_load 1.2s linear infinite;
+}
+
+.ct_load div:nth-child(1) {
+	animation-delay: 0s;
+	top: 29px;
+	left: 53px;
+}
+
+.ct_load div:nth-child(2) {
+	animation-delay: -0.1s;
+	top: 18px;
+	left: 50px;
+}
+
+.ct_load div:nth-child(3) {
+	animation-delay: -0.2s;
+	top: 9px;
+	left: 41px;
+}
+
+.ct_load div:nth-child(4) {
+	animation-delay: -0.3s;
+	top: 6px;
+	left: 29px;
+}
+
+.ct_load div:nth-child(5) {
+	animation-delay: -0.4s;
+	top: 9px;
+	left: 18px;
+}
+
+.ct_load div:nth-child(6) {
+	animation-delay: -0.5s;
+	top: 18px;
+	left: 9px;
+}
+
+.ct_load div:nth-child(7) {
+	animation-delay: -0.6s;
+	top: 29px;
+	left: 6px;
+}
+
+.ct_load div:nth-child(8) {
+	animation-delay: -0.7s;
+	top: 41px;
+	left: 9px;
+}
+
+.ct_load div:nth-child(9) {
+	animation-delay: -0.8s;
+	top: 50px;
+	left: 18px;
+}
+
+.ct_load div:nth-child(10) {
+	animation-delay: -0.9s;
+	top: 53px;
+	left: 29px;
+}
+
+.ct_load div:nth-child(11) {
+	animation-delay: -1s;
+	top: 50px;
+	left: 41px;
+}
+
+.ct_load div:nth-child(12) {
+	animation-delay: -1.1s;
+	top: 41px;
+	left: 50px;
+}
+
+@keyframes ct_load {
+	0%,
+	20%,
+	80%,
+	100% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.5);
+	}
+}
+
+.ct_input {
+	position: relative;
+	display: block;
+	width: 500px;
+	height: 38px;
+	margin: 2px 0 10px 0;
+	border: 1px solid #C1C1C1;
+	overflow: hidden;
+}
+
+.ct_input_title {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.ct_input_title span {
+	color: #FF3030;
+	font-size: 13px;
+}
+
+.ct_input input {
+	border: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	font-size: 16px;
+	padding: 0 5px 0 8px;
+}
+
+.ct_input input:focus {
+	outline: #08f auto 2px;
+}
+
+.ct_input_select select {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.ct_input option {
+	font-size: 13px;
+}
+
+.ct_input_textarea {
+	height: 100px;
+}
+
+.ct_input_textarea textarea {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	border: 0;
+	resize: none;
+	padding: 5px;
+}
+
+.ct_attach_div {
+	min-height: 20px;
+	position: relative;
+}
+
+.form {
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 5px !important;
+	font-size: 15px !important;
+	cursor: pointer;
+	outline: none;
+}
+
+.ct_form_error_msg {
+	font-size: 13px;
+	margin: 0 5px 10px 10px;
+	color: red;
+}
+
+.ct_submsg_txt {
+	display: block;
+	position: relative;
+	min-height: 40px;
+	width: 400px;
+	margin: 20px 10px 20px 0;
+	font-size: 14px;
+}
+
+.ct_submsg_txt span {
+	color: #3F82FC;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.ct_submit_button {
+	display: block;
+	width: 150px;
+	height: 37px;
+	margin-bottom: 30px;
+	text-align: center;
+	padding-top: 5px;
+	font-weight: bold;
+	border: 2px solid #000;
+	background-color: #000;
+	color: #fff;
+	cursor: pointer;
+	border-radius: 4px;
+	opacity: 1;
+}
+
+.ct_submit_button:hover {
+	opacity: 0.9;
+}
+
+.contact_req_sent_msg {
+	margin-top: 10px;
+	font-size: 17px;
+	color: #FF3A3A;
+}
+
+.ct_und_txt {
+	border-top: 1px solid #CBCBCB;
+	min-height: 20px;
+	padding-top: 10px;
+	padding-left: 0;
+	text-align: left;
+	font-size: 16px;
+	margin: 20px 0 20px 0;
+}
+
+.ct_submsg_err_txt {
+	display: block;
+	width: 500px;
+	height: 27px;
+	margin-bottom: 20px;
+	color: #FF3A3A;
+	text-align: left;
+	border-radius: 4px;
+}
+
+.ct_email_error_msg {
+	color: #FF3A3A;
+	margin-bottom: 5px;
+}
+

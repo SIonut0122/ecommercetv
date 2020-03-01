@@ -1,0 +1,163 @@
+
+
+@mixin disable-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+}
+
+@media screen and (max-width: 1100px) {
+  .wfc_sec_fspan_select {
+    width: 230px !important;
+  }
+  .wfc_sel_ul {
+    width: 230px !important;
+  }
+}
+
+.findstore_container {
+  position: relative;
+  display: block;
+  min-height: 400px;
+  background-color: #D9D9D9;
+  font-family: azo-sans-web, 'Qanelas';
+}
+
+.wrap_findstore_cont {
+  position: relative;
+  display: block;
+  min-height: 450px;
+  margin: 20px 0 45px 0;
+  padding-bottom: 30px;
+  background-color: #fff;
+}
+
+.wrap_fsc_nav {
+  display: inline-block;
+  min-height: 25px;
+  margin-top: 15px;
+  padding: 14px 0 15px 10px;
+  border-bottom: 1px solid #D4D4D4;
+}
+
+.wrap_fsc_nav span {
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.fas_subnav_address {
+  color: #3766FF;
+  cursor: pointer;
+}
+
+.fas_subnav_address:hover {
+  text-decoration: underline;
+}
+
+
+/* --- Section --- */
+
+.wfc_sect {
+  display: block;
+  position: relative;
+  min-height: 300px;
+  padding: 8px;
+}
+
+.wfc_sec_wrap_first {
+  position: absolute;
+  min-height: 180px;
+  border: 1px solid #C6C6C6;
+  box-shadow: 0 0 1px 0 #D4D4D4;
+  margin-top: 50px;
+}
+
+.wfc_sec_wrap_first div:nth-child(1) {
+  position: relative;
+  font-size: 23px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.wfc_sec_wrap_first div:nth-child(2) {
+  position: relative;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.wfc_sec_fspan_select {
+  display: block;
+  position: relative;
+  width: 260px;
+  height: 32px;
+  border: 1px solid #C6C6C6;
+  font-size: 17px;
+  margin-top: 10px;
+  cursor: pointer;
+  transform: 0.5s;
+  padding: 2px 0 0 10px;
+  background: url('../images/cart/updownarrow.svg') 98% / 4.5% no-repeat #fff;
+}
+
+.wfc_sec_fspan_select:hover {
+  border: 1px solid #9D9D9D;
+}
+
+.wfc_sel_ul {
+  display: block;
+  position: absolute;
+  width: 260px;
+  min-height: 150px;
+  max-height: 250px;
+  overflow-y: scroll;
+  margin-top: 5px;
+  background-color: #fff;
+  border: 1px solid #C6C6C6;
+  list-style-type: none;
+  padding: 3px;
+  z-index: 2;
+}
+
+.wfc_sel_ul li {
+  width: 100%;
+  cursor: pointer;
+  @include disable-select;
+}
+
+.wfc_sel_ul li:hover {
+  background-color: #D4D4D4;
+}
+
+.wfc_selcountry_button {
+  display: block;
+  width: 200px;
+  height: 35px;
+  text-align: center;
+  padding-top: 4px;
+  margin: 30px 0 20px 0;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.wfc_selcountry_button:hover {
+  box-shadow: 1px 0 3px 0 #000;
+}
+
+.wfc_selcountry_button i {
+  vertical-align: middle;
+  font-size: 13px;
+  margin-left: 10px;
+}
+
+#map {
+  display: block;
+  margin-top: 10px;
+  min-height: 280px;
+  z-index: 1;
+  border: 1px solid #C6C6C6;
+  padding: 4px;
+  border-radius: 3px;
+}
+

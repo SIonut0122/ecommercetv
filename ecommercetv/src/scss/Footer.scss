@@ -1,0 +1,328 @@
+
+
+@mixin disable-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+}
+
+@media screen and (max-width: 400px) {
+  .foooter_t_f_ul li {
+    font-size: 11px !important;
+    margin-top: 3px;
+  }
+  .footer_tcol_paymeth_img img {
+    width: 35px !important;
+    height: 22px !important;
+  }
+  .row_our_serv {
+    margin-top: 40px !important;
+  }
+}
+
+@media screen and (max-width: 575.5px) {
+  .footer_first_row .footer_f_col:nth-child(1) {
+    text-align: center !important;
+    font-size: 10px !important;
+  }
+  .footer_first_row .footer_f_col:nth-child(2),
+  .footer_first_row .footer_f_col:nth-child(3) {
+    font-size: 10px;
+    text-align: center !important;
+  }
+  .footer_findstore_img {
+    width: 80px !important;
+  }
+  .footer_followus_img img {
+    display: inline-block;
+    width: 25px !important;
+    height: 25px !important;
+    margin: 8px !important;
+  }
+  .footer_s_col_newsletter {
+    border-bottom: 1px solid #4D4D4D !important;
+    margin-bottom: 20px !important;
+    padding-bottom: 10px !important;
+  }
+}
+
+@media screen and (max-width: 767.5px) {
+  .footer_tcol_ourserv {
+    order: 2;
+  }
+  .footer_tcol_paymeth {
+    order: 1;
+  }
+  .footer_tcol_helpsupport {
+    order: 3;
+  }
+}
+
+.footer_container {
+  display: block;
+  position: relative;
+  min-height: 250px;
+  font-family: azo-sans-web, 'Qanelas';
+  margin: 0;
+  background-color: #252932;
+}
+
+
+/* -- Footer first row -- */
+
+.footer_first_row {
+  display: block;
+  min-height: 40px;
+  position: relative;
+  background-color: #252932;
+  padding: 10px;
+}
+
+.footer_f_col {
+  text-align: center;
+  color: #909090;
+  font-weight: bold;
+  font-size: 13.5px;
+  min-height: 25px;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+.footer_first_row .footer_f_col:nth-child(1) {
+  text-align: right;
+}
+
+.footer_first_row .footer_f_col:nth-child(3) {
+  text-align: left;
+}
+
+.footer_f_col i {
+  margin-right: 10px;
+  color: #CECECE;
+  font-size: 15px;
+  width: 20px;
+}
+
+
+/* -- Footer second row -- */
+
+.footer_sec_row {
+  display: block;
+  min-height: 100px;
+  background-color: #292E38;
+  padding-top: 20px;
+}
+
+.footer_s_col {
+  display: block;
+  position: relative;
+  min-height: 100px;
+}
+
+.footer_s_col_newsletter {
+  margin-bottom: 10px;
+}
+
+.footer_s_col_newsletter div:nth-child(1) span {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 15px;
+  color: #909090;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #4D4D4D;
+  padding-bottom: 3px;
+  margin-bottom: 3px;
+}
+
+.footer_s_col_newsletter div:nth-child(2) span {
+  position: relative;
+  height: 30px;
+  border-radius: 2px;
+  overflow: hidden;
+  margin: 6px 0 0 0;
+}
+
+.footer_s_col_newsletter div:nth-child(2) span input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border: 0;
+  padding: 0 10px 0 10px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #909090;
+}
+
+.footer_s_col_newsletter div:nth-child(2) span input::placeholder,
+.footer_s_col_newsletter div:nth-child(2) span input::-moz-placeholder,
+.footer_s_col_newsletter div:nth-child(2) span input::-webkit-input-placeholder,
+.footer_s_col_newsletter div:nth-child(2) span input:-moz-placeholder,
+.footer_s_col_newsletter div:nth-child(2) span input:-ms-input-placeholder,
+.footer_s_col_newsletter div:nth-child(2) span input::-ms-input-placeholder {
+  color: #909090;
+}
+
+.footer_s_col_newsletter .footer_subscr_error {
+  color: #FF3A3A;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.footer_subscr_succeed {
+  color: #36D63E;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.footer_s_col_newsletter .footer_subscr_button {
+  color: #909090;
+  display: block;
+  width: 230px;
+  height: 30px;
+  border: 1px solid #909090;
+  margin: 10px 0 10px 0;
+  text-align: center;
+  padding-top: 2px;
+  cursor: pointer;
+  transition: 0.2s;
+  border-radius: 2px;
+  @include disable-select;
+}
+
+.footer_s_col_newsletter .footer_subscr_button:hover {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.footer_findstore_img {
+  color: #909090;
+  font-size: 35px;
+  width: 100px;
+  @include disable-select;
+}
+
+.footer_findstore_button {
+  display: block;
+  height: 27px;
+  min-width: 100px;
+  border: 1px solid #909090;
+  text-align: center;
+  color: #909090;
+  cursor: pointer;
+  margin: 13px;
+  transition: 0.2s;
+  border-radius: 2px;
+  @include disable-select;
+}
+
+.footer_findstore_button:hover {
+  color: #fff;
+  border: 1px solid #fff;
+  text-decoration: none;
+}
+
+.footer_findstore_button i {
+  font-size: 13px;
+  margin-right: 5px;
+}
+
+
+/* -- Footer follow us -- */
+
+.footer_followus_title {
+  color: #909090;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px;
+  border-bottom: 1px solid #4D4D4D;
+  padding-bottom: 3px;
+}
+
+.footer_followus_img {
+  display: inline-block;
+  min-height: 40px;
+}
+
+.footer_followus_img img {
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  margin: 10px;
+  cursor: pointer;
+  opacity: 0.8;
+  @include disable-select;
+}
+
+.footer_followus_img img:hover {
+  opacity: 1;
+}
+
+
+/* -- Footer follow us -- */
+
+.footer_third_row {
+  display: block;
+  min-height: 50px;
+  position: relative;
+  background-color: #252932;
+  padding-top: 20px;
+}
+
+
+/* ---- Footer third col ---- */
+
+.footer_third_col {
+  position: relative;
+  display: block;
+  min-height: 50px;
+}
+
+.footer_tcol_ourserv div:nth-child(1) span,
+.footer_tcol_helpsupport div:nth-child(1) span,
+.footer_tcol_paymeth div:nth-child(1) span {
+  font-weight: bold;
+  color: #fff;
+  font-size: 13px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  color: #909090;
+}
+
+.foooter_t_f_ul {
+  list-style-type: none;
+  color: #fff;
+  padding: 0;
+}
+
+.foooter_t_f_ul li {
+  font-size: 13px;
+  color: #909090;
+}
+
+.foooter_t_f_ul li:hover {
+  cursor: pointer;
+  color: #CECECE;
+  text-decoration: underline;
+}
+
+.footer_tcol_paymeth_img {
+  position: relative;
+  display: inline-block;
+  min-height: 30px;
+  margin-bottom: 15px;
+}
+
+.footer_tcol_paymeth_img img {
+  display: inline-block;
+  width: 40px;
+  height: 23px;
+  margin: 5px;
+  padding: 1px;
+  border-radius: 3px;
+  border: 1px solid #888888;
+}
+
+ 
