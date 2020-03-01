@@ -1,4 +1,5 @@
 ## eCommerceTv
+Source code: https://github.com/SIonut0122/ecommercetv/tree/gh-pages/ecommercetv
 
 ## Description
 This app was created for self-learning purpose.
