@@ -1,40 +1,36 @@
-import React, { Component } from 'react';
-import { connect }          from "react-redux";
-import { userSignedInFunc } from '../actions/index';
-import { userInfoFunc }     from '../actions/index';
-import { openTvCont }       from '../actions/index';
-import { openSigninSignUp } from '../actions/index';
-import { Redirect }         from 'react-router'
-import Header               from './Header';
-import Footer               from './Footer';
-import firebase             from '@firebase/app';
-
+import   React, { Component } from 'react';
+import { connect            } from "react-redux";
+import { userSignedInFunc   } from '../actions/index';
+import { userInfoFunc       } from '../actions/index';
+import { openTvCont         } from '../actions/index';
+import { openSigninSignUp   } from '../actions/index';
+import { Redirect           } from 'react-router'
+import   Header               from './Header';
+import   Footer               from './Footer';
+import   firebase             from '@firebase/app';
 import '../css/LoginSignup.css';
 import 'firebase/auth';
 import '../firebase';
 
 
 
-
-
  const mapStateToProps = state => {
   return {  
-            openSigninOrSignUp: state.openSigninOrSignUp,
-            userInfo:           state.userInfo,
-            userSignedIn:       state.userSignedIn,
+            openSigninOrSignUp : state.openSigninOrSignUp,
+            userInfo           : state.userInfo,
+            userSignedIn       : state.userSignedIn,
         };
 };
 
+
  function mapDispatchToProps(dispatch) {
   return {
-    userSignedInFunc: bol => dispatch(userSignedInFunc(bol)),
-    userInfoFunc:     info => dispatch(userInfoFunc(info)),
-    openTvCont:       bol => dispatch(openTvCont(bol)),
-    openSigninSignUp: bol => dispatch(openSigninSignUp(bol))
+    userSignedInFunc : bol  => dispatch(userSignedInFunc(bol)),
+    userInfoFunc     : info => dispatch(userInfoFunc(info)),
+    openTvCont       : bol  => dispatch(openTvCont(bol)),
+    openSigninSignUp : bol  => dispatch(openSigninSignUp(bol))
   };
 }
-
-
 
 
 
@@ -45,25 +41,25 @@ class ConnectedSigninSignup extends Component {
     super(props)
 
         this.state = {
-            signupUsername: '',
-            signupUsernameValid: false,
-            signupFullname: '',
-            signupFullnameValid: false,
-            signupEmail: '',
-            signupEmailValid: false,
-            signupPassword: '',
-            signupPasswordValid: false,
-            signinEmail: '',
-            signinEmailValid: false,
-            signinPassword: '',
-            signinPasswordValid: false,
-            forgotPasswordValue: '',
-            forgotPasswordValid: false,
-            preloadEff: true,
-
+            signupUsername      : '',
+            signupUsernameValid : false,
+            signupFullname      : '',
+            signupFullnameValid : false,
+            signupEmail         : '',
+            signupEmailValid    : false,
+            signupPassword      : '',
+            signupPasswordValid : false,
+            signinEmail         : '',
+            signinEmailValid    : false,
+            signinPassword      : '',
+            signinPasswordValid : false,
+            forgotPasswordValue : '',
+            forgotPasswordValid : false,
+            preloadEff          : true
         }
 
     }
+
 
  
 
