@@ -1,54 +1,45 @@
-import React, { Component }   from 'react';
-import { connect }            from "react-redux";
-import { openTvCont }         from '../actions/index';
-import { userSignedInFunc }   from '../actions/index';
-import { userInfoFunc }       from '../actions/index';
-import { openUserMenuFunct }  from '../actions/index';
-import { selectedProduct }    from '../actions/index';
+import   React, { Component } from 'react';
+import { connect            } from "react-redux";
+import { openTvCont         } from '../actions/index';
+import { userSignedInFunc   } from '../actions/index';
+import { userInfoFunc       } from '../actions/index';
+import { openUserMenuFunct  } from '../actions/index';
+import { selectedProduct    } from '../actions/index';
 import { viewProductDetails } from '../actions/index';
 import { tvCartProductsFunc } from '../actions/index';
-import { addedToCart }        from '../actions/index';
-import Header                 from './Header';
-import Footer                 from './Footer';
-import {Link }                from 'react-router-dom'
-import tvProducts             from '../jsonData/tvProducts.js';
-import 'firebase/auth';
-import '../firebase';
-import '../css/Tv_cont.css';
-import '../js/script.js';
-
-
+import { addedToCart        } from '../actions/index';
+import { Link               } from 'react-router-dom'
+import   Header               from './Header';
+import   Footer               from './Footer';
+import   tvProducts           from '../jsonData/tvProducts.js';
+import   'firebase/auth';
+import   '../firebase';
+import   '../css/Tv_cont.css';
+import   '../js/script.js';
 
 
  const mapStateToProps = state => {
-  return {  userSignedIn:   state.userSignedIn,
-            product:        state.product,
-            userInfo:       state.userInfo,
-            openTvCont:     state.openTvCont,
-            tvCartProducts: state.tvCartProducts,
-            cartItems:      state.cartItems
-
+  return {  userSignedIn   : state.userSignedIn,
+            product        : state.product,
+            userInfo       : state.userInfo,
+            openTvCont     : state.openTvCont,
+            tvCartProducts : state.tvCartProducts,
+            cartItems      : state.cartItems
         };
-   
 };
 
  function mapDispatchToProps(dispatch) {
   return {
-            userSignedInFunc:   bol => dispatch(userSignedInFunc(bol)),
-            userInfoFunc:       bol => dispatch(userInfoFunc(bol)),
-            openTvCont:         bol => dispatch(openTvCont(bol)),
-            viewProductDetails: bol => dispatch(viewProductDetails(bol)),
-            selectedProduct:    product => dispatch(selectedProduct(product)),
-            tvCartProductsFunc: prod => dispatch(tvCartProductsFunc(prod)),
-            addedToCart:        bol => dispatch(addedToCart(bol)),
-            openUserMenuFunct:  bol => dispatch(openUserMenuFunct(bol))
-            
+            userSignedInFunc   : bol     => dispatch(userSignedInFunc(bol)),
+            userInfoFunc       : bol     => dispatch(userInfoFunc(bol)),
+            openTvCont         : bol     => dispatch(openTvCont(bol)),
+            viewProductDetails : bol     => dispatch(viewProductDetails(bol)),
+            selectedProduct    : product => dispatch(selectedProduct(product)),
+            tvCartProductsFunc : prod    => dispatch(tvCartProductsFunc(prod)),
+            addedToCart        : bol     => dispatch(addedToCart(bol)),
+            openUserMenuFunct  : bol     => dispatch(openUserMenuFunct(bol))
   };
 }
-
-
-
-
 
 
 class ConnectedTvCont extends Component {
@@ -57,35 +48,35 @@ class ConnectedTvCont extends Component {
     super(props)
 
       this.state = {
-                tvCartProducts:         tvProducts,
-                duplicateTvProd:        tvProducts,
-                product:                this.props.product,
-                openRatingSelect:       false,
-                ratingFilter:           [
-                                          {rating: 'Rating'  ,value: 0},
-                                          {rating: '1 star'  ,value:1 ,percent: 20},
-                                          {rating: '2 stars' ,value:2 ,percent: 40},
-                                          {rating: '3 stars' ,value:3 ,percent: 60},
-                                          {rating: '4 stars' ,value:4 ,percent: 75},
-                                          {rating: '5 stars' ,value:5 ,percent: 99}
-                                        ],
-                ratingFilterSelValue:   '',
-                openPriceSelect:        false,
-                priceFilter:            ['Price', 200, 300, 400, 500, 600, 700],
-                priceFilterSelValue:    '',
-                openDiagonalSelect:     false,
-                diagonalSizeFilter:     ['Diagonal', 45, 55, 60, 65, 75],
-                diagonalFilterSelValue: '',
-                displayFilterMobile:    false,
-                intervalValue:          null,
-                indexValue:             1,
-                filterValues:           [{ rating: '', price: '', diagonal: '' }],
-                query:                  '',
-                openSortMenu:           false,
-                sortByFilters:          [{value: 0,title:"Relevance"},{value:1,title:"Deals & Offers"},{value:2,title:"Brand - A to Z"},{value:3,title:"Brand - Z to A"},{value:4,title:"Price - low to high"},{value:5,title:"Price - high to low"}],   
-              
+                tvCartProducts         : tvProducts,
+                duplicateTvProd        : tvProducts,
+                product                : this.props.product,
+                openRatingSelect       : false,
+                ratingFilter           : [
+                                          {rating: 'Rating'  ,value: 0             },
+                                          {rating: '1 star'  ,value: 1 ,percent: 20},
+                                          {rating: '2 stars' ,value: 2 ,percent: 40},
+                                          {rating: '3 stars' ,value: 3 ,percent: 60},
+                                          {rating: '4 stars' ,value: 4 ,percent: 75},
+                                          {rating: '5 stars' ,value: 5 ,percent: 99}
+                                         ],
+                ratingFilterSelValue   : '',
+                openPriceSelect        : false,
+                priceFilter            : ['Price', 200, 300, 400, 500, 600, 700],
+                priceFilterSelValue    : '',
+                openDiagonalSelect     : false,
+                diagonalSizeFilter     : ['Diagonal', 45, 55, 60, 65, 75],
+                diagonalFilterSelValue : '',
+                displayFilterMobile    : false,
+                intervalValue          : null,
+                indexValue             : 1,
+                filterValues           : [{ rating: '', price: '', diagonal: '' }],
+                query                  : '',
+                openSortMenu           : false,
+                sortByFilters          :  [{value: 0,title:"Relevance"},{value:1,title:"Deals & Offers"},{value:2,title:"Brand - A to Z"},{value:3,title:"Brand - Z to A"},{value:4,title:"Price - low to high"},{value:5,title:"Price - high to low"}],    
       }
     }
+
 
  
 
