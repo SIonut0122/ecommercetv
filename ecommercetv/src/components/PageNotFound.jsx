@@ -1,7 +1,7 @@
-import React, { Component }   from 'react';
-import { openTvCont }         from '../actions/index';
-import { connect }            from "react-redux";
-import {Link }                from 'react-router-dom'
+import   React, { Component } from 'react';
+import { openTvCont         } from '../actions/index';
+import { connect            } from "react-redux";
+import { Link               } from 'react-router-dom'
 import Header                 from './Header';
 import Footer                 from './Footer';
 import '../css/PageNotFound.css';
@@ -18,10 +18,7 @@ function mapDispatchToProps(dispatch) {
 class ConnectedPageNotFound extends Component {
   constructor(props) {
     super(props)
-        
-        this.state = {
-                 
-        }
+        this.state = {}
     }
 
 
