@@ -1,54 +1,50 @@
-import React, { Component }   from 'react';
-import Header                 from './Header';
-import Footer                 from './Footer';
-import {Link }                from 'react-router-dom'
-import { connect }            from "react-redux";
-import { openTvCont }         from '../actions/index';
-import { favListProducts }    from '../actions/index';
-import { viewProductDetails } from '../actions/index';
-import { selectedProduct }    from '../actions/index';
-import { tvCartProductsFunc } from '../actions/index';
-import { addedToCart }        from '../actions/index';
-import { openCart }           from '../actions/index';
-import { mayBeInterested }    from '../actions/index';
-import { mayBeInterestedTwo } from '../actions/index';
-import { openUserMenuFunct }  from '../actions/index';
-import GoogleMapReact         from 'google-map-react';
+import   React, { Component  } from 'react';
 import { FacebookShareButton, 
-         TwitterShareButton } from 'react-share';
-import userReviewComments     from '../jsonData/userReviewComments.js';
-import '../css/ViewProductDetails.css';
-import '../js/script.js';
-
-
-
-
+         TwitterShareButton  } from 'react-share';
+import { Link                } from 'react-router-dom'
+import { connect             } from "react-redux";
+import { openTvCont,
+         favListProducts,
+         viewProductDetails,
+         selectedProduct,
+         tvCartProductsFunc,
+         addedToCart,
+         openCart,
+         mayBeInterested,
+         mayBeInterestedTwo,
+         openUserMenuFunct   } from '../actions/index';
+import   GoogleMapReact        from 'google-map-react';
+import   userReviewComments    from '../jsonData/userReviewComments.js';
+import   Header                from './Header';
+import   Footer                from './Footer';
+import   '../css/ViewProductDetails.css';
+import   '../js/script.js';
 
 
 
  const mapStateToProps = state => {
-  return {  product:                     state.product,
-            tvCartProducts:              state.tvCartProducts,
-            favoriteList:                state.favoriteList,
-            cartItems:                   state.cartItems,
-            mayBeInterestedProducts:     state.mayBeInterestedProducts,
-            mayBeInterestedProducts_two: state.mayBeInterestedProducts_two
+  return {  product                     : state.product,
+            tvCartProducts              : state.tvCartProducts,
+            favoriteList                : state.favoriteList,
+            cartItems                   : state.cartItems,
+            mayBeInterestedProducts     : state.mayBeInterestedProducts,
+            mayBeInterestedProducts_two : state.mayBeInterestedProducts_two
         };
    
 };
 
  function mapDispatchToProps(dispatch) {
   return {
-    favListProducts:    prod => dispatch(favListProducts(prod)),
-    openCart:           bol => dispatch(openCart(bol)),
-    openTvCont:         bol => dispatch(openTvCont(bol)),
-    viewProductDetails: bol => dispatch(viewProductDetails(bol)),
-    selectedProduct:    product => dispatch(selectedProduct(product)),
-    openUserMenuFunct:  bol => dispatch(openUserMenuFunct(bol)),
-    tvCartProductsFunc: prod => dispatch(tvCartProductsFunc(prod)),
-    addedToCart:        bol => dispatch(addedToCart(bol)),
-    mayBeInterested:    prod => dispatch(mayBeInterested(prod)),
-    mayBeInterestedTwo: prod => dispatch(mayBeInterestedTwo(prod))
+      favListProducts    : prod    => dispatch(favListProducts(prod)),
+      openCart           : bol     => dispatch(openCart(bol)),
+      openTvCont         : bol     => dispatch(openTvCont(bol)),
+      viewProductDetails : bol     => dispatch(viewProductDetails(bol)),
+      selectedProduct    : product => dispatch(selectedProduct(product)),
+      openUserMenuFunct  : bol     => dispatch(openUserMenuFunct(bol)),
+      tvCartProductsFunc : prod    => dispatch(tvCartProductsFunc(prod)),
+      addedToCart        : bol     => dispatch(addedToCart(bol)),
+      mayBeInterested    : prod    => dispatch(mayBeInterested(prod)),
+      mayBeInterestedTwo : prod    => dispatch(mayBeInterestedTwo(prod))
   };
 }
 
@@ -59,33 +55,30 @@ class connectViewProductDetails extends Component {
     super(props);
 
     this.state = {
-                      product :                    this.props.product,
-                      tvCartProducts:              this.props.tvCartProducts,
-                      cartItems:                   this.props.cartItems,
-                      mayBeInterestedProducts:     this.props.mayBeInterestedProducts,
-                      mayBeInterestedProducts_two: this.props.mayBeInterestedProducts_two,
-                      center:                      { lat: 44.79, lng: 10.32 },
-                      zoom:                        9,
-                      viewProductDescr:            true,
-                      viewProductReview:           false,
-                      rateProductReview:           false,
-                      revRecommendChecked:         false,
-                      reviewName:                  '',
-                      reviewNameValid:             false,
-                      reviewTitle:                 '',
-                      reviewTitleValid:            false,
-                      reviewComment:               '',
-                      reviewCommentValid:          false,
-                      reviewEmail:                 '',
-                      reviewEmailValid:            false,
-                      reviewSubmitted:             false,
-                      reviewComments:              userReviewComments,
-                      checkProductValability:      false,
-                      displayFullImageContainer:   false
-
-
+                      product                     : this.props.product,
+                      tvCartProducts              : this.props.tvCartProducts,
+                      cartItems                   : this.props.cartItems,
+                      mayBeInterestedProducts     : this.props.mayBeInterestedProducts,
+                      mayBeInterestedProducts_two : this.props.mayBeInterestedProducts_two,
+                      center                      : { lat: 44.79, lng: 10.32 },
+                      zoom                        : 9,
+                      viewProductDescr            : true,
+                      viewProductReview           : false,
+                      rateProductReview           : false,
+                      revRecommendChecked         : false,
+                      reviewName                  : '',
+                      reviewNameValid             : false,
+                      reviewTitle                 : '',
+                      reviewTitleValid            : false,
+                      reviewComment               : '',
+                      reviewCommentValid          : false,
+                      reviewEmail                 : '',
+                      reviewEmailValid            : false,
+                      reviewSubmitted             : false,
+                      reviewComments              : userReviewComments,
+                      checkProductValability      : false,
+                      displayFullImageContainer   : false
                }
-
     }
 
 
