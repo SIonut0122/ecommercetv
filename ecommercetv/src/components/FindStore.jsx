@@ -1,22 +1,23 @@
-import React, { Component }   from 'react';
-import GoogleMapReact         from 'google-map-react';
-import { connect }            from "react-redux";
-import { openTvCont }         from '../actions/index';
-import { openFindStore }      from '../actions/index';
-import { openUserMenuFunct }  from '../actions/index';
-import {Link }                from 'react-router-dom'
-import Header                 from './Header';
-import Footer                 from './Footer';
+import   React, { Component } from 'react';
+import { connect            } from "react-redux";
+import { openTvCont         } from '../actions/index';
+import { openFindStore      } from '../actions/index';
+import { openUserMenuFunct  } from '../actions/index';
+import { Link               } from 'react-router-dom';
+import   GoogleMapReact       from 'google-map-react';
+import   Header               from './Header';
+import   Footer               from './Footer';
 import '../css/FindStore.css';
+
+
 
  function mapDispatchToProps(dispatch) {
   return {
-    openTvCont:        bol => dispatch(openTvCont(bol)),
-    openFindStore:     bol => dispatch(openFindStore(bol)),
-    openUserMenuFunct: bol => dispatch(openUserMenuFunct(bol))
+    openTvCont        : bol => dispatch(openTvCont(bol)),
+    openFindStore     : bol => dispatch(openFindStore(bol)),
+    openUserMenuFunct : bol => dispatch(openUserMenuFunct(bol))
   };
 }
-
 
 
 class ConnectedFindStore extends Component {
@@ -24,13 +25,12 @@ class ConnectedFindStore extends Component {
     super(props);
 
     this.state = {  
-                    openCountryList: false,
-                    countryList:     [],
-                    center: {lat: 44.79, lng: 10.32},
-                    zoom:             9,
+                    openCountryList : false,
+                    countryList     : [],
+                    center          : {lat: 44.79, lng: 10.32},
+                    zoom            : 9,
                  }
     }
-
  
 componentDidMount() {
     // Fetch coutries list
