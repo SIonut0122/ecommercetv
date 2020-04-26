@@ -1,56 +1,55 @@
 import React, { Component }   from 'react';
-import '../css/Cart.css';
 import tvProducts             from '../jsonData/tvProducts.js';
 import Header                 from './Header';
 import Footer                 from './Footer';
 import {Link }                from 'react-router-dom'
 import { connect }            from "react-redux";
-import { openCart }           from '../actions/index';
-import { openTvCont }         from '../actions/index';
-import { selectedProduct }    from '../actions/index';
-import { viewProductDetails } from '../actions/index';
-import { tvCartProductsFunc } from '../actions/index';
-import { addedToCart }        from '../actions/index';
-import { mayBeInterested }    from '../actions/index';
-import { mayBeInterestedTwo } from '../actions/index';
-import { openUserMenuFunct }  from '../actions/index';
-import { openCheckout }       from '../actions/index';
-import { cartTotalSum }       from '../actions/index';
-import { openSigninSignUp }   from '../actions/index';
-import { checkoutSelCountry } from '../actions/index';
+import { openCart,
+         openTvCont,
+         selectedProduct,
+         viewProductDetails,
+         tvCartProductsFunc,
+         addedToCart, 
+         mayBeInterested,
+         mayBeInterestedTwo,
+         openUserMenuFunct,
+         openCheckout,
+         cartTotalSum,
+         openSigninSignUp,
+         checkoutSelCountry }  from '../actions/index';
+import '../css/Cart.css';
 
 
 
 const mapStateToProps = state => {
-  return {  openCart:                    state.openCart,
-            product:                     state.product,
-            tvCartProducts:              state.tvCartProducts,
-            cartItems:                   state.cartItems,
-            mayBeInterestedProducts:     state.mayBeInterestedProducts,
-            mayBeInterestedProducts_two: state.mayBeInterestedProducts_two,
-            userSignedIn:                state.userSignedIn
+  return {  openCart                    : state.openCart,
+            product                     : state.product,
+            tvCartProducts              : state.tvCartProducts,
+            cartItems                   : state.cartItems,
+            mayBeInterestedProducts     : state.mayBeInterestedProducts,
+            mayBeInterestedProducts_two : state.mayBeInterestedProducts_two,
+            userSignedIn                : state.userSignedIn
         };
       };
 
  function mapDispatchToProps(dispatch) {
   return {
-    openTvCont:         bol     => dispatch(openTvCont(bol)),
-    openCart:           bol     => dispatch(openCart(bol)),
-    viewProductDetails: bol     => dispatch(viewProductDetails(bol)),
-    selectedProduct:    product => dispatch(selectedProduct(product)),
-    addedToCart:        bol     => dispatch(addedToCart(bol)),
-    tvCartProductsFunc: prod    => dispatch(tvCartProductsFunc(prod)),
-    mayBeInterested:    prod    => dispatch(mayBeInterested(prod)),
-    mayBeInterestedTwo: prod    => dispatch(mayBeInterestedTwo(prod)),
-    openCheckout:       bol     => dispatch(openCheckout(bol)),
-    cartTotalSum:       no      => dispatch(cartTotalSum(no)),
-    openSigninSignUp:   bol     => dispatch(openSigninSignUp(bol)),
-    openUserMenuFunct:  bol     => dispatch(openUserMenuFunct(bol)),
-    checkoutSelCountry: bol     => dispatch(checkoutSelCountry(bol))
+    openTvCont         : bol     => dispatch(openTvCont(bol)),
+    openCart           : bol     => dispatch(openCart(bol)),
+    viewProductDetails : bol     => dispatch(viewProductDetails(bol)),
+    selectedProduct    : product => dispatch(selectedProduct(product)),
+    addedToCart        : bol     => dispatch(addedToCart(bol)),
+    tvCartProductsFunc : prod    => dispatch(tvCartProductsFunc(prod)),
+    mayBeInterested    : prod    => dispatch(mayBeInterested(prod)),
+    mayBeInterestedTwo : prod    => dispatch(mayBeInterestedTwo(prod)),
+    openCheckout       : bol     => dispatch(openCheckout(bol)),
+    cartTotalSum       : no      => dispatch(cartTotalSum(no)),
+    openSigninSignUp   : bol     => dispatch(openSigninSignUp(bol)),
+    openUserMenuFunct  : bol     => dispatch(openUserMenuFunct(bol)),
+    checkoutSelCountry : bol     => dispatch(checkoutSelCountry(bol))
     
   };
 }
-
 
 
 class ConnectedCart extends Component {
@@ -58,10 +57,10 @@ class ConnectedCart extends Component {
     super(props)
 
       this.state = {
-                exploreItems: [],
-                emptyCart: false,
-                countryList: ["Italy","Australia","Austria","Belgium","Canada","Denmark","Finland","France","Germany","Iceland","Ireland","Japan","Netherlands","New Zealand","Norway","Poland","South Korea","Spain","Sweden","Switzerland","Taiwan","United Kingdom","United States"],
-                quantity: [1,2,3,4,5,6,7,8,9,10,15,20,25,30]
+                exploreItems : [],
+                emptyCart    : false,
+                countryList  : ["Italy","Australia","Austria","Belgium","Canada","Denmark","Finland","France","Germany","Iceland","Ireland","Japan","Netherlands","New Zealand","Norway","Poland","South Korea","Spain","Sweden","Switzerland","Taiwan","United Kingdom","United States"],
+                quantity     : [1,2,3,4,5,6,7,8,9,10,15,20,25,30]
       }
    }
 
