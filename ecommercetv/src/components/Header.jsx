@@ -1,53 +1,52 @@
-import React, { Component }   from 'react';
-import firebase               from '@firebase/app';
-import {Link }                from 'react-router-dom'
-import { connect }            from "react-redux";
-import { openFavoriteList }   from '../actions/index';
-import { favListProducts }    from '../actions/index';
-import { openCart }           from '../actions/index';
-import { openTvCont }         from '../actions/index';
-import { openSigninSignUp }   from '../actions/index';
-import { openUserMenuFunct }  from '../actions/index';
-import { openContact }        from '../actions/index';
-import { viewProductDetails } from '../actions/index';
-import { openCheckout }       from '../actions/index';
-import { openFindStore }      from '../actions/index';
-import { userSignedInFunc }   from '../actions/index';
-import { userInfoFunc }       from '../actions/index';
-import '../css/Header.css';
-import '../js/script.js';
-import 'firebase/auth';
-import '../firebase';
-
+import React, { Component   } from 'react';
+import { Link               } from 'react-router-dom'
+import { connect            } from "react-redux";
+import { openFavoriteList,
+         favListProducts,
+         openCart,
+         openTvCont,
+         openSigninSignUp,
+         openUserMenuFunct,
+         openContact,
+         viewProductDetails,
+         openCheckout,
+         openFindStore,
+         userSignedInFunc,
+         userInfoFunc       } from '../actions/index';
+import   firebase             from '@firebase/app';
+import  '../css/Header.css';
+import  '../js/script.js';
+import  'firebase/auth';
+import  '../firebase';
 
 
 
  function mapDispatchToProps(dispatch) {
   return {
-    userSignedInFunc:   bol => dispatch(userSignedInFunc(bol)),
-    userInfoFunc:       info => dispatch(userInfoFunc(info)),
-    openFavoriteList:   bol => dispatch(openFavoriteList(bol)),
-    favListProducts:    prod => dispatch(favListProducts(prod)),
-    openCart:           bol => dispatch(openCart(bol)),
-    openTvCont:         bol => dispatch(openTvCont(bol)),
-    openSigninSignUp:   bol => dispatch(openSigninSignUp(bol)),
-    openUserMenuFunct:  bol => dispatch(openUserMenuFunct(bol)),
-    openContact:        bol => dispatch(openContact(bol)),
-    viewProductDetails: prod => dispatch(viewProductDetails(prod)),
-    openCheckout:       bol => dispatch(openCheckout(bol)),
-    openFindStore:      bol => dispatch(openFindStore(bol)),
+    userSignedInFunc   : bol  => dispatch(userSignedInFunc(bol)),
+    userInfoFunc       : info => dispatch(userInfoFunc(info)),
+    openFavoriteList   : bol  => dispatch(openFavoriteList(bol)),
+    favListProducts    : prod => dispatch(favListProducts(prod)),
+    openCart           : bol  => dispatch(openCart(bol)),
+    openTvCont         : bol  => dispatch(openTvCont(bol)),
+    openSigninSignUp   : bol  => dispatch(openSigninSignUp(bol)),
+    openUserMenuFunct  : bol  => dispatch(openUserMenuFunct(bol)),
+    openContact        : bol  => dispatch(openContact(bol)),
+    viewProductDetails : prod => dispatch(viewProductDetails(prod)),
+    openCheckout       : bol  => dispatch(openCheckout(bol)),
+    openFindStore      : bol  => dispatch(openFindStore(bol)),
   };
 }
 
 
  const mapStateToProps = state => {
-  return {  cartItems:          state.cartItems,
-            userSignedIn:       state.userSignedIn,
-            userInfo:           state.userInfo,
-            openSigninOrSignUp: state.openSigninOrSignUp,
-            openUserMenu:       state.openUserMenu,
-            openFavList:        state.openFavList,
-            favoriteList:       state.favoriteList
+  return {  cartItems          : state.cartItems,
+            userSignedIn       : state.userSignedIn,
+            userInfo           : state.userInfo,
+            openSigninOrSignUp : state.openSigninOrSignUp,
+            openUserMenu       : state.openUserMenu,
+            openFavList        : state.openFavList,
+            favoriteList       : state.favoriteList
         };
 };
  
@@ -58,6 +57,7 @@ class ConnectedHeader extends Component {
     super(props)
         this.state = {}
     }
+
 
 
 componentDidMount() {
