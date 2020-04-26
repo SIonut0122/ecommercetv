@@ -1,11 +1,12 @@
 import React, { Component }   from 'react';
+import React, { Component }   from 'react';
 import { connect }            from "react-redux";
 import { openCheckout }       from '../actions/index';
 import { openTvCont }         from '../actions/index';
 import { openCart }           from '../actions/index';
+import {Link,Redirect }       from 'react-router-dom'
 import Header                 from './Header';
 import Footer                 from './Footer';
-import {Link,Redirect }       from 'react-router-dom'
 import '../css/Checkout.css';
 
 const uuidv1 = require('uuid/v1');
@@ -13,19 +14,19 @@ const uuidv1 = require('uuid/v1');
 
  const mapStateToProps = state => {
   return {  
-            userSignedIn:    state.userSignedIn,
-            userInfo:        state.userInfo,
-            cartItems:       state.cartItems,
-            cartTotalSum:    state.cartTotalSum,
-            shipToCountry:   state.checkoutSelectedCountry
+            userSignedIn  : state.userSignedIn,
+            userInfo      : state.userInfo,
+            cartItems     : state.cartItems,
+            cartTotalSum  : state.cartTotalSum,
+            shipToCountry : state.checkoutSelectedCountry
         };
 };
 
  function mapDispatchToProps(dispatch) {
   return {
-            openCheckout: bol => dispatch(openCheckout(bol)),
-            openTvCont:   bol => dispatch(openTvCont(bol)),
-            openCart:     bol => dispatch(openCart(bol))
+            openCheckout : bol => dispatch(openCheckout(bol)),
+            openTvCont   : bol => dispatch(openTvCont(bol)),
+            openCart     : bol => dispatch(openCart(bol))
         };
 }
 
@@ -34,40 +35,39 @@ class ConnectedCheckout extends Component {
     super(props)
 
     this.state = { 
-                    checkoutName: 'Gigel',
-                    checkoutNameValid: false,
-                    checkoutLastName: 'PoaleinBrau',
-                    checkoutLastNameValid: false,
-                    checkoutAddress: '',
-                    checkoutAddressValid: false,
-                    checkoutAddressTwo: '',
-                    checkoutCity: '',
-                    checkoutCityValid: false,
-                    checkoutPhoneNumber: '',
-                    checkoutPhoneNumberValid: false,
-                    selectedCountry: this.props.shipToCountry,
+                    checkoutName             : 'Gigel',
+                    checkoutNameValid        : false,
+                    checkoutLastName         : 'PoaleinBrau',
+                    checkoutLastNameValid    : false,
+                    checkoutAddress          : '',
+                    checkoutAddressValid     : false,
+                    checkoutAddressTwo       : '',
+                    checkoutCity             : '',
+                    checkoutCityValid        : false,
+                    checkoutPhoneNumber      : '',
+                    checkoutPhoneNumberValid : false,
+                    selectedCountry          : this.props.shipToCountry,
 
-                    cardNumber: '',
-                    cardNumberValid: false,
-                    cardExpiryMonth: '',
-                    cardExpiryMonthValid: false,
-                    cardExpiryYear: '',
-                    cardExpiryYearValid: false,
-                    cardName: '',
-                    cardNameValid: '',
-                    cardSecurityCode: '',
-                    cardSecurityCodeValid: false,
+                    cardNumber               : '',
+                    cardNumberValid          : false,
+                    cardExpiryMonth          : '',
+                    cardExpiryMonthValid     : false,
+                    cardExpiryYear           : '',
+                    cardExpiryYearValid      : false,
+                    cardName                 : '',
+                    cardNameValid            : '',
+                    cardSecurityCode         : '',
+                    cardSecurityCodeValid    : false,
 
-                    paymentCard: false,
-                    paymentCardReference: '',
-                    loadingPaymentCard: false,
-                    acceptedPayment: false,
-                    addressInfoValid: false,
-                    finishedPayment: false,
+                    paymentCard              : false,
+                    paymentCardReference     : '',
+                    loadingPaymentCard       : false,
+                    acceptedPayment          : false,
+                    addressInfoValid         : false,
+                    finishedPayment          : false,
 
                  }
     }
-
 
 
 componentDidMount() {
