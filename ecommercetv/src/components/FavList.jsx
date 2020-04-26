@@ -1,44 +1,45 @@
-import React, { Component }   from 'react';
-import '../css/FavList.css';
-import Header                 from './Header';
-import Footer                 from './Footer';
-import { connect }            from "react-redux";
-import {Link }                from 'react-router-dom'
-import { openFavoriteList }   from '../actions/index';
-import { favListProducts }    from '../actions/index';
-import { selectedProduct }    from '../actions/index';
-import { viewProductDetails } from '../actions/index';
-import { openTvCont }         from '../actions/index';
-import { FacebookShareButton, TwitterShareButton,WhatsappShareButton,RedditShareButton, LinkedinShareButton, EmailShareButton }
-                              from 'react-share';
+import   React, { Component }  from 'react';
+import { connect            }  from "react-redux";
+import { Link               }  from 'react-router-dom'
+import { openFavoriteList,
+         favListProducts,
+         selectedProduct,
+         viewProductDetails,
+         openTvCont          } from '../actions/index';
+import { FacebookShareButton, 
+         TwitterShareButton,
+         WhatsappShareButton,
+         RedditShareButton, 
+         LinkedinShareButton, 
+         EmailShareButton     } from 'react-share';
+import   Header                 from './Header';
+import   Footer                 from './Footer';
+import  '../css/FavList.css';
          
         
  function mapDispatchToProps(dispatch) {
   return {
-    openFavoriteList:   bol => dispatch(openFavoriteList(bol)),
-    favListProducts:    prod => dispatch(favListProducts(prod)),
-    openTvCont:         bol => dispatch(openTvCont(bol)),
-    selectedProduct:    product => dispatch(selectedProduct(product)),
-    viewProductDetails: bol => dispatch(viewProductDetails(bol)),
+    openFavoriteList   : bol     => dispatch(openFavoriteList(bol)),
+    favListProducts    : prod    => dispatch(favListProducts(prod)),
+    openTvCont         : bol     => dispatch(openTvCont(bol)),
+    selectedProduct    : product => dispatch(selectedProduct(product)),
+    viewProductDetails : bol     => dispatch(viewProductDetails(bol)),
   };
 }
 
  const mapStateToProps = state => {
   return {  
-          openFavList:  state.openFavList,
-          favoriteList: state.favoriteList,
-          product:      state.product,
+          openFavList  : state.openFavList,
+          favoriteList : state.favoriteList,
+          product      : state.product,
         };
 };
  
 
-
 class ConnectedFavList extends Component {
   constructor(props) {
     super(props)
-        
-        this.state = { shareFavListOpen: false} 
-                        
+        this.state = { shareFavListOpen: false}                  
     }
 
 componentDidMount() {
