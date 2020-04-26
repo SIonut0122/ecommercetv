@@ -1,20 +1,20 @@
-import React, { Component }   from 'react';
-import { connect }            from "react-redux";
-import { openTvCont }         from '../actions/index';
-import { openContact }        from '../actions/index';
-import { openUserMenuFunct }  from '../actions/index';
-import Header                 from './Header';
-import Footer                 from './Footer';
-import {Link }                from 'react-router-dom'
+import React, { Component  } from 'react';
+import { connect           } from "react-redux";
+import { openTvCont        } from '../actions/index';
+import { openContact       } from '../actions/index';
+import { openUserMenuFunct } from '../actions/index';
+import { Link              } from 'react-router-dom'
+import Header                from './Header';
+import Footer                from './Footer';
 import '../css/Contact.css';
 
 
 
  function mapDispatchToProps(dispatch) {
   return {
-    openTvCont:         bol => dispatch(openTvCont(bol)),
-    openContact:        bol => dispatch(openContact(bol)),
-    openUserMenuFunct:  bol => dispatch(openUserMenuFunct(bol))
+    openTvCont        : bol => dispatch(openTvCont(bol)),
+    openContact       : bol => dispatch(openContact(bol)),
+    openUserMenuFunct : bol => dispatch(openUserMenuFunct(bol))
   };
 }
 
@@ -24,21 +24,21 @@ class ConnectedContact extends Component {
     super(props)
 
     this.state = {
-            contactEmailAddressInput: '',
-            contactEmailValid:        false,
-            contactEmailErrorTxt:     false,
-            contactSubjectInput:      '',
-            contactSubjectValid:      false,
-            contactDetailsValue:      '',
-            contactDetailsValid:      false,
-            inputsCannotBeBlank:      false,
-            allowedImageType:         false,
-            requestSelected:          false,
-            requestDivLoad:           false,
-            requestSent:              false,
-
+            contactEmailAddressInput : '',
+            contactEmailValid        : false,
+            contactEmailErrorTxt     : false,
+            contactSubjectInput      : '',
+            contactSubjectValid      : false,
+            contactDetailsValue      : '',
+            contactDetailsValid      : false,
+            inputsCannotBeBlank      : false,
+            allowedImageType         : false,
+            requestSelected          : false,
+            requestDivLoad           : false,
+            requestSent              : false
     }
   }
+
 
 
 componentDidMount() {
