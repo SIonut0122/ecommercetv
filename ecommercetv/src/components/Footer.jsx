@@ -1,33 +1,30 @@
-import React, { Component }   from 'react';
-import { openUserMenuFunct }  from '../actions/index';
-import { openFindStore }      from '../actions/index';
-import { openFavoriteList }   from '../actions/index';
-import { openTvCont }         from '../actions/index';
-import { openCart }           from '../actions/index';
-import { openSigninSignUp }   from '../actions/index';
-import { openContact }        from '../actions/index';
-import { viewProductDetails } from '../actions/index';
-import { openCheckout }       from '../actions/index';
-import { connect }            from "react-redux";
-import {Link }                from 'react-router-dom'
+import   React, { Component  } from 'react';
+import { openUserMenuFunct,
+         openFindStore,
+         openFavoriteList,
+         openTvCont,
+         openCart,
+         openSigninSignUp,
+         openContact,
+         viewProductDetails,
+         openCheckout        } from '../actions/index';
+import { connect }             from "react-redux";
+import { Link }                from 'react-router-dom'
 import '../css/Footer.css';
-
-
-
 
 
 
 function mapDispatchToProps(dispatch) {
   return {
-        openUserMenuFunct:  bol => dispatch(openUserMenuFunct(bol)),  
-        openFindStore:      bol => dispatch(openFindStore(bol)), 
-        openFavoriteList:   bol => dispatch(openFavoriteList(bol)),
-        openTvCont:         bol => dispatch(openTvCont(bol)), 
-        openCart:           bol => dispatch(openCart(bol)), 
-        openSigninSignUp: bol => dispatch(openSigninSignUp(bol)), 
-        openContact:        bol => dispatch(openContact(bol)), 
-        viewProductDetails: bol => dispatch(viewProductDetails(bol)), 
-        openCheckout:       bol => dispatch(openCheckout(bol))    
+        openUserMenuFunct  : bol => dispatch(openUserMenuFunct(bol)),  
+        openFindStore      : bol => dispatch(openFindStore(bol)), 
+        openFavoriteList   : bol => dispatch(openFavoriteList(bol)),
+        openTvCont         : bol => dispatch(openTvCont(bol)), 
+        openCart           : bol => dispatch(openCart(bol)), 
+        openSigninSignUp   : bol => dispatch(openSigninSignUp(bol)), 
+        openContact        : bol => dispatch(openContact(bol)), 
+        viewProductDetails : bol => dispatch(viewProductDetails(bol)), 
+        openCheckout       : bol => dispatch(openCheckout(bol))    
   };
 }
 
@@ -37,10 +34,10 @@ class ConnectedFooter extends Component {
     super(props)
         
         this.state = {
-                  newsletterEmail: '',
-                  newsletterEmailValid: false,
-                  newsletterErrorMsg: false,
-                  newsletterSubscribed: false,
+                  newsletterEmail      : '',
+                  newsletterEmailValid : false,
+                  newsletterErrorMsg   : false,
+                  newsletterSubscribed : false,
         }
     }
 
