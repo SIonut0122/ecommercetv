@@ -1,12 +1,12 @@
-import React, { Component }   from 'react';
-import React, { Component }   from 'react';
-import { connect }            from "react-redux";
-import { openCheckout }       from '../actions/index';
-import { openTvCont }         from '../actions/index';
-import { openCart }           from '../actions/index';
-import {Link,Redirect }       from 'react-router-dom'
-import Header                 from './Header';
-import Footer                 from './Footer';
+import React, { Component } from 'react';
+import React, { Component } from 'react';
+import { connect          } from "react-redux";
+import { openCheckout     } from '../actions/index';
+import { openTvCont       } from '../actions/index';
+import { openCart         } from '../actions/index';
+import { Link,Redirect    } from 'react-router-dom'
+import Header               from './Header';
+import Footer               from './Footer';
 import '../css/Checkout.css';
 
 const uuidv1 = require('uuid/v1');
