@@ -13,7 +13,6 @@ import 'firebase/auth';
 import '../firebase';
 
 
-
  const mapStateToProps = state => {
   return {  
             openSigninOrSignUp : state.openSigninOrSignUp,
@@ -33,13 +32,10 @@ import '../firebase';
 }
 
 
-
-
 class ConnectedSigninSignup extends Component {
 
   constructor(props) {
     super(props)
-
         this.state = {
             signupUsername      : '',
             signupUsernameValid : false,
@@ -57,13 +53,10 @@ class ConnectedSigninSignup extends Component {
             forgotPasswordValid : false,
             preloadEff          : true
         }
-
     }
 
 
  
-
-
 componentDidMount() {
     // Call authlistener to check if user is logged in
   this.authListener();
